@@ -1,9 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
-  devtool: 'eval',
+  mode: 'production',
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  entry: {
+    app: path.resolve(__dirname, 'src', 'index'),
+  },
   module: {
     rules: [
       {
@@ -33,19 +38,8 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
   output: {
-    filename: 'app.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'build'),
-  },
-  devServer: {
-    contentBase: path.join(__dirname, '/'),
-    publicPath: "/build/",
-    overlay: true,
-    port: 3000,
-    hot: true,
-    open: true,
   },
 };

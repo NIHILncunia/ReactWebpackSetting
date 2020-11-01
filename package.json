@@ -4,8 +4,8 @@
   "description": "Project Description",
   "main": "./src/index.js",
   "scripts": {
-    "dev": "webpack",
-    "serve": "webpack serve"
+    "serve": "webpack serve --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",

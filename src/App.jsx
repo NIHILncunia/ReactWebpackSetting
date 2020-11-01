@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { hot } from 'react-hot-loader';
 
 const TestApp = () => {
-  const [word, setWord] = useState('World');
+  const [name, setName] = useState('React');
 
   return (
-    <p>Hello {word}!!</p>
+    <p>Hello {name}!!</p>
   );
 };
 
