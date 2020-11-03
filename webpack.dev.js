@@ -1,13 +1,14 @@
 const path = require('path');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  devtool: 'eval',
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
+  devtool: 'inline-source-map',
   entry: {
     app: path.resolve(__dirname, 'src', 'index'),
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -23,8 +24,9 @@ module.exports = {
                   esmodules: true,
                 },
               }],
-              '@babel/preset-react'],
-            plugins: ['react-hot-loader/babel'],
+              '@babel/preset-react'
+            ],
+            plugins: ['react-refresh/babel'],
           },
         },
       },
@@ -38,6 +40,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new ReactRefreshWebpackPlugin(),
+  ],
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'build'),

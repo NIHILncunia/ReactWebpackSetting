@@ -3,11 +3,11 @@ const path = require('path');
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
   entry: {
     app: path.resolve(__dirname, 'src', 'index'),
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -23,8 +23,9 @@ module.exports = {
                   esmodules: true,
                 },
               }],
-              '@babel/preset-react'],
-            plugins: ['react-hot-loader/babel'],
+              '@babel/preset-react'
+            ],
+            plugins: [],
           },
         },
       },
@@ -38,6 +39,7 @@ module.exports = {
       },
     ],
   },
+  plugins: [],
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'build'),

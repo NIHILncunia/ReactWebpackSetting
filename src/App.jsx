@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { hot } from 'react-hot-loader';
 
 const TestApp = () => {
   const [name, setName] = useState('React');
@@ -9,4 +8,4 @@ const TestApp = () => {
   );
 };
 
-export default hot(module)(TestApp);
+export default TestApp;
