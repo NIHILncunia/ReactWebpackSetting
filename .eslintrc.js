@@ -31,6 +31,7 @@ module.exports = {
     "semi": 2,
     "no-unexpected-multiline": 0,
     "no-empty": 1,
+    
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0,
     "react/display-name": 1
