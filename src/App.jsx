@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const TestApp = () => {
-  const [name, setName] = useState('React');
+  const [ name, setName, ] = useState('React');
 
   const onclickButton = () => {
     if (name === 'React') {
