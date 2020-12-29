@@ -1,36 +1,36 @@
 module.exports = {
-  root: true,
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "node": true,
+  'root': true,
+  'env': {
+    'browser': true,
+    'commonjs': true,
+    'es6': true,
+    'node': true,
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
+  'extends': [
+    'eslint:recommended',
+    'plugin:react/recommended',
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly",
+  'globals': {
+    'Atomics': 'readonly',
+    'SharedArrayBuffer': 'readonly',
   },
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
+  'parserOptions': {
+    'ecmaVersion': 2020,
+    'sourceType': 'module',
+    'ecmaFeatures': {
+      'jsx': true,
     },
   },
-  "plugins": [
-    "import",
-    "react-hooks",
+  'plugins': [
+    'import',
+    'react-hooks',
   ],
-  "rules": {
+  'rules': {
     'no-console': 0,
     'no-unused-vars': 1,
     'no-unexpected-multiline': 0,
     'no-empty': 1,
-    semi: [ 2, 'always', ],
+    'semi': [ 2, 'always', ],
     'eol-last': [ 1, 'never', ],
     'space-before-function-paren': [ 1, 'never', ],
     'comma-dangle': [ 1, {
@@ -38,9 +38,11 @@ module.exports = {
       'objects': 'always',
     }, ],
     'array-bracket-spacing': [ 1, 'always', ],
+    'quote-props': [ 1, 'always', ],
+    'quotes': [ 1, 'single', ],
     
-    "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0,
-    "react/display-name": 1,
+    'react/prop-types': 0,
+    'react/react-in-jsx-scope': 0,
+    'react/display-name': 1,
   },
 };
