@@ -1,37 +1,47 @@
 const path = require('path');
 
 module.exports = {
-  'mode': 'production',
-  'devtool': 'source-map',
-  'entry': {
-    'app': path.resolve(__dirname, 'src', 'index'),
+  mode: 'production',
+  devtool: 'source-map',
+  entry: {
+    app: path.resolve(__dirname, 'src', 'index'),
   },
-  'resolve': {
-    'extensions': [ '.js', '.jsx', ],
+  resolve: {
+    extensions: [ '.js', '.jsx', ],
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@store': path.resolve(__dirname, 'src/store/'),
+      '@assets': path.resolve(__dirname, 'src/assets/'),
+      '@images': path.resolve(__dirname, 'src/assets/images/'),
+      '@css': path.resolve(__dirname, 'src/assets/css/'),
+      '@hooks': path.resolve(__dirname, 'src/hooks/'),
+      '@reducers': path.resolve(__dirname, 'src/reducers/'),
+    },
   },
-  'module': {
-    'rules': [
+  module: {
+    rules: [
       {
-        'test': /\.jsx?/,
-        'exclude': /node_modules/,
-        'use': {
-          'loader': 'babel-loader',
-          'options': {
-            'presets': [ [
+        test: /\.jsx?/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [ [
               '@babel/preset-env', {
-                'targets': {
-                  'esmodules': true,
+                targets: {
+                  esmodules: true,
                 },
               }, ],
               '@babel/preset-react',
             ],
-            'plugins': [],
+            plugins: [],
           },
         },
       },
       {
-        'test': [ /\.s[ac]ss$/i, /\.css$/i, ],
-        'use': [
+        test: [ /\.s[ac]ss$/i, /\.css$/i, ],
+        use: [
           'style-loader',
           'css-loader',
           'sass-loader',
@@ -39,9 +49,9 @@ module.exports = {
       },
     ],
   },
-  'plugins': [],
-  'output': {
-    'filename': '[name].js',
-    'path': path.resolve(__dirname, 'build'),
+  plugins: [],
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'build'),
   },
 };
