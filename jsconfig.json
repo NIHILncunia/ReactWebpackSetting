@@ -10,6 +10,7 @@
       "@css/*": ["./src/assets/css/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@reducers/*": ["./src/reducers/*"],
+      "@utils/*": ["./src/utils/*"],
     }
   },
   "exclude": [
