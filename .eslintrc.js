@@ -36,7 +36,7 @@ module.exports = {
     'space-before-function-paren': 0,
     'array-bracket-spacing': [ 1, 'always', {
         'arraysInArrays': true,
-        'singleValue': false,
+        'singleValue': true,
         'objectsInArrays': true,
       }, ],
     'arrow-parens': 0,
