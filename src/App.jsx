@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { css } from '@emotion/react';
 
-const TestApp = () => {
+const App = () => {
   const [ name, setName, ] = useState('React');
 
   const onclickButton = () => {
@@ -11,12 +12,16 @@ const TestApp = () => {
     }
   };
 
+  const Color = css`
+    color: red;
+  `;
+
   return (
     <>
-      <p>Hello {name}!!</p>
+      <p css={Color}>Hello {name}!!</p>
       <button onClick={onclickButton}>변경</button>
     </>
   );
 };
 
-export default TestApp;
+export default App;

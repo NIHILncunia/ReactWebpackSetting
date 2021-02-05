@@ -35,6 +35,8 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
+    "@emotion/babel-plugin": "^11.1.2",
+    "@emotion/babel-preset-css-prop": "^11.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
