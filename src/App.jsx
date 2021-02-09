@@ -14,7 +14,9 @@ const App = () => {
   };
 
   const Color = css`
-    color: red;
+    color: #ffffff;
+    background: #333333;
+    padding: 10px;
   `;
 
   return (
@@ -38,5 +40,9 @@ const App = () => {
 // bool: PropTypes.bool.isRequired,
 // symbol: PropTypes.symbol.isRequired,
 // elementType: PropTypes.elementType.isRequired,
+
+// shape: PropTypes.shape({
+//   item: PropTypes.string.isRequired,
+// });
 
 export default App;
