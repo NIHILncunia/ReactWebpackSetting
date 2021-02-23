@@ -53,7 +53,7 @@ module.exports = {
     'object-curly-spacing': [ 1, 'always', ],
     'arrow-spacing': [ 1, { before: true, after: true, }, ],
     'keyword-spacing': [ 1, {
-      'overrides': {
+      overrides: {
         if: { before: true, after: true, },
         for: { before: true, after: true, },
         while: { before: true, after: true, },
