@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { css } from '@emotion/react';
 // import PropTypes from 'prop-types';
 
 const App = () => {
   const [ name, setName, ] = useState('React');
 
-  const onclickButton = () => {
+  const onclickButton = useCallback(() => {
     if (name === 'React') {
       setName('Vue');
     } else {
       setName('React');
     }
-  };
+  }, [ name, ]);
 
   const Color = css`
     color: #ffffff;

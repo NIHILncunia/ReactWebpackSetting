@@ -2,7 +2,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@store/*": ["./src/store/*"],
       "@assets/*": ["./src/assets/*"],
@@ -12,6 +11,8 @@
       "@reducers/*": ["./src/reducers/*"],
       "@contexts/*": ["./src/contexts/*"],
       "@utils/*": ["./src/utils/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@layouts/*": ["./src/layouts/*"],
     }
   },
   "exclude": [

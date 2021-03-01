@@ -10,7 +10,6 @@ module.exports = {
   resolve: {
     extensions: [ '.js', '.jsx', ],
     alias: {
-      '@': path.resolve(__dirname, 'src/'),
       '@components': path.resolve(__dirname, 'src/components/'),
       '@store': path.resolve(__dirname, 'src/store/'),
       '@assets': path.resolve(__dirname, 'src/assets/'),
@@ -20,6 +19,8 @@ module.exports = {
       '@reducers': path.resolve(__dirname, 'src/reducers/'),
       '@contexts': path.resolve(__dirname, 'src/contexts/'),
       '@utils': path.resolve(__dirname, 'src/utils/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@layouts': path.resolve(__dirname, 'src/layouts/'),
     },
   },
   module: {
@@ -32,16 +33,13 @@ module.exports = {
           options: {
             presets: [ [
               '@babel/preset-env', {
-                targets: {
-                  esmodules: true,
-                },
+                targets: { browsers: [ 'last 2 chrome versions', ], },
               }, ],
               '@babel/preset-react',
               '@emotion/babel-preset-css-prop',
             ],
             plugins: [
-              '@emotion',
-              'react-refresh/babel',
+              [ '@emotion/babel-plugin', { sourceMap: true, }, ], require.resolve('react-refresh/babel'),
             ],
           },
         },
@@ -64,6 +62,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, '/'),
     publicPath: '/build/',
     overlay: true,
