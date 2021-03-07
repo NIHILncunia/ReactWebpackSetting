@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import ReducerTemplate from '../reducers/ReducerTemplate';
+import ReducerTemplate from '@reducers/ReducerTemplate';
 
 export const TestContext = createContext();
 
@@ -19,3 +19,5 @@ const TestContextProvider = ({ children, }) => {
     </TestContext.Provider>
   );
 };
+
+export default TestContextProvider;
