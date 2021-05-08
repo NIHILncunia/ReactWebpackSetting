@@ -3,6 +3,6 @@ import { render } from 'react-dom';
 
 import App from './App';
 
-import '@css/style.scss';
+import '@/styles/style.scss';
 
 render(<App />, document.querySelector('#root'));

@@ -5,16 +5,15 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@store/*": ["./src/store/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@images/*": ["./src/assets/images/*"],
-      "@css/*": ["./src/assets/css/*"],
+      "@images/*": ["./src/images/*"],
+      "@styles/*": ["./src/styles/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@reducers/*": ["./src/reducers/*"],
       "@contexts/*": ["./src/contexts/*"],
       "@utils/*": ["./src/utils/*"],
       "@pages/*": ["./src/pages/*"],
       "@data/*": ["./src/data/*"],
-      "@layouts/*": ["./src/layouts/*"],
+      "@layouts/*": ["./src/layouts/*"]
     }
   },
   "exclude": [
