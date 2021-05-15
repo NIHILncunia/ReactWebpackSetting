@@ -5,12 +5,12 @@
   "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+github.com:NIHILncunia/ReactWebpackSetting.git"
+    "url": "git+github.com:NIHILncunia/nihil-react-template.git"
   },
   "bugs": {
-    "url": "https://github.com:NIHILncunia/ReactWebpackSetting/issues"
+    "url": "https://github.com:NIHILncunia/nihil-react-template/issues"
   },
-  "homepage": "https://github.com:NIHILncunia/ReactWebpackSetting#readme",
+  "homepage": "https://github.com:NIHILncunia/nihil-react-template#readme",
   "scripts": {
     "serve": "webpack serve --config webpack.dev.js",
     "prod": "webpack --config webpack.prod.js"
