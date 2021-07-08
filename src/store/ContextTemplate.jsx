@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import ReducerTemplate from '@reducers/ReducerTemplate';
+import ReducerTemplate from '@/reducers/ReducerTemplate';
 
 export const TestContext = createContext();
 
@@ -12,7 +12,7 @@ const initialState = [ {
 // 사용할 때엔 이 파일을 불러와서 사용할 컴포넌트의 부모태그로 만들어주면 된다.
 const TestContextProvider = ({ children, }) => {
   const [ state, dispatch, ] = useReducer(ReducerTemplate, initialState);
-
+  
   return (
     <TestContext.Provider value={{ state, dispatch, }}>
       { children }
