@@ -9,9 +9,7 @@
       "@/styles/*": ["./src/styles/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/reducers/*": ["./src/reducers/*"],
-      "@/contexts/*": ["./src/contexts/*"],
       "@/utils/*": ["./src/utils/*"],
-      "@/pages/*": ["./src/pages/*"],
       "@/data/*": ["./src/data/*"],
       "@/layouts/*": ["./src/layouts/*"]
     }
